@@ -1,11 +1,13 @@
 <template>
   <div class="accordion" :class="{ open: isOpen }" v-if="topic">
-    <a href="#" class="accordion__header" @click.prevent="isOpen = !isOpen">{{
-      topic.title
-    }}</a>
+    <a href="#" class="accordion__header" @click.prevent="isOpen = !isOpen">
+        <i :class="topic.fa" aria-hidden="true"></i>
+        <span>{{topic.title}}</span>
+        <i class="fas fa-chevron-right open-flag" aria-hidden="true"></i>
+    </a>
     <ul>
       <li v-for="(link, index) in topic.links" :key="index">
-        <a :href="link.url">{{ link.title }}</a>
+        <a :href="link.url"><i :class="link.fa" aria-hidden="true"></i>{{ link.title }}</a>
       </li>
     </ul>
   </div>
@@ -25,26 +27,60 @@ export default {
 
 <style lang="scss" scoped>
 .accordion {
-  background-color: white;
-  border: 1px solid #dfdfdf;
-  border-radius: 5px;
+  // background-color: white;
+  border-bottom: 1px solid rgb(117,190, 233);
+  border-radius: 0px;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
 
   &__header {
     display: block;
-    background-color: #b2c6db;
-    padding: 15px 0 15px 15px;
-    color: #042158;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;
+    > i:before {
+      font-size: 18px;
+      margin-right: 15px;
+      margin-left: 0;
+    }
+    > span {
+      font-size: 15px;
+      color: rgb(158,168,181);
+    }
+    i.open-flag {
+      display:block;
+      float: right;
+      margin-top: 2px;
+      transition: all 0.3s ease-in-out;
+
+      &:before {
+        font-size: 13px;
+        color: #b0b8c2;
+        margin-right: 0;
+      }
+    }
   }
 
   &.open {
     > ul {
       max-height: 1000px;
-      transition: max-height 350ms ease-in-out;
+      transition: max-height 650ms ease-in-out;
+    }
+    > a > span {
+     color: white;
+    }
+    i.open-flag {
+      transform: rotate(90deg);
+      transition: all 0.3s ease-in-out;
+      &:before {
+        color: #75bee9;
+      }
     }
   }
 
   > ul {
     display: block;
+    background: linear-gradient(to right, #75bee9, #0074c8);
     box-sizing: border-box;
     list-style: none;
     margin: 0;
@@ -59,19 +95,29 @@ export default {
       display: block;
       color: #042158;
       padding: 10px 15px;
-      border-bottom: 1px solid #bfbfbf;
+      //border-bottom: 1px solid #bfbfbf;
 
       &:first-child {
-        margin-top: 20px;
+        margin-top: 10px;
       }
 
       &:last-child {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
 
       a {
-        color: #042158;
+        color: rgb(0,116,200);
+        font-weight: bold;
         text-decoration: none;
+        > i {
+          font-size: 14px;
+          margin-right: 10px;
+          margin-left: 0;
+        }
+        &:hover {
+          color: rgb(0, 100, 184);
+          text-decoration: underline;
+        }
       }
     }
   }

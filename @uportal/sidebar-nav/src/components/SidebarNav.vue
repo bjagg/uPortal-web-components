@@ -1,5 +1,6 @@
 <template>
   <div class="sidebar-nav" v-if="linkData">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <div class="sidebar-nav__accordions">
       <accordion
         v-for="(accordionItem, index) in linkData.topics"

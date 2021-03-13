@@ -1,23 +1,85 @@
 {
   "topics": [
     {
-      "title": "Test Item",
+      "title": "Welcome/Home",
+      "fa": "fal fa-door-open",
       "links": [
         {
-          "title": "Link Title",
+          "title": "Welcome",
+          "fa": "fas fa-door-open",
           "url": "/"
         },
         {
-          "title": "Link Title",
+          "title": "Campus Hours",
+          "fa": "fad fa-hourglass-start",
+          "url": "/"
+        },
+        {
+          "title": "Events",
+          "fa": "fas fa-calendar-day",
           "url": "/"
         }
       ]
     },
     {
-      "title": "Test Item",
+      "title": "Torero Hub",
+      "fa": "fab fa-hubspot",
       "links": [
         {
-          "title": "Link Title",
+          "title": "My Academics",
+          "fa": "fad fa-backpack",
+          "url": "/"
+        },
+        {
+          "title": "My Financial Aid",
+          "fa": "fad fa-hands-helping",
+          "url": "/"
+        },
+        {
+          "title": "My Gadgets",
+          "fa": "fas fa-microchip",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "title": "Help Desk & Support",
+      "fa": "fal fa-user-headset",
+      "links": [
+        {
+          "title": "My Support Services",
+          "fa": "fal fa-headset",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "title": "Applications & Tools",
+      "fa": "fal fa-toolbox",
+      "links": [
+        {
+          "title": "Applications",
+          "fa": "fad fa-browser",
+          "url": "/"
+        },
+        {
+          "title": "Tools",
+          "fa": "fas fa-tools",
+          "url": "/"
+        },
+        {
+          "title": "USD Services",
+          "fa": "fab fa-servicestack",
+          "url": "/"
+        },
+        {
+          "title": "Push Notifications",
+          "fa": "fad fa-bell-on",
+          "url": "/"
+        },
+        {
+          "title": "USD One",
+          "fa": "fal fa-file-user",
           "url": "/"
         }
       ]
